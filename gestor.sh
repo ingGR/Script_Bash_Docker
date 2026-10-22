@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do
-    echo "========================================"
+   echo "========================================"
     echo "  GESTOR - hola-docker"
     echo "========================================"
     echo "1. Verificar prerrequisitos"
@@ -26,17 +26,15 @@ while true; do
             ;;
 
         2)
-            echo "--- 2. Compilando aplicación ---"
-            if [ -f "./mvnw" ]; then
-                ./mvnw clean package -DskipTests
-            else
-                mvn clean package -DskipTests
-            fi
+            echo "--- 2. Compilando y Empaquetando ---"
+            # Compilación directa usando Maven instalado en el sistema
+            mvn clean package -DskipTests
 
+            # Validar si el archivo JAR se generó con la bandera -f
             if [ -f "target/hola-docker-0.0.1-SNAPSHOT.jar" ]; then
-                echo "-> Éxito: JAR creado en target/hola-docker-0.0.1-SNAPSHOT.jar"
+                echo "-> [ÉXITO] Archivo JAR generado correctamente en:"target/hola-docker-0.0.1-SNAPSHOT.jar""
             else
-                echo "-> Error: No se pudo generar el JAR."
+                echo "-> [ERROR] Ocurrió un error y no se pudo generar el ejecutable."
             fi
             ;;
 
