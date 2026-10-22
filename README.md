@@ -8,17 +8,17 @@ El proyecto se inicializó originalmente utilizando **Spring Initializr** (`star
 * Se creó script gestión de contenedores para automatizar el ciclo de vida del software:
 * Opciones del gestor:
 
-          Verificar dependencias: Comprueba que Maven, Java y Docker estén instalados.
+  1.Verificar dependencias: Comprueba que Maven, Java y Docker estén instalados.
 
-          Compilar y empaquetar: Ejecuta mvn clean package -DskipTests para generar el .jar.
+  2.Compilar y empaquetar: Ejecuta mvn clean package -DskipTests para generar el .jar.
 
-          Construir imagen Docker: Ejecuta docker build utilizando el Dockerfile del proyecto.
+  3.Construir imagen Docker: Ejecuta docker build utilizando el Dockerfile del proyecto.
 
-          Ejecutar contenedor: Lanza el contenedor mapeando el puerto 8080:8080. (Permite sobreescribir contenedores anteriores).
+  4.Ejecutar contenedor: Lanza el contenedor mapeando el puerto 8080:8080. (Permite sobreescribir contenedores anteriores).
 
-          Ver estado del contenedor: Muestra los contenedores en ejecución (docker ps).
+  5.Ver estado del contenedor: Muestra los contenedores en ejecución (docker ps).
 
-          Salir: Finaliza el script
+  6.Salir: Finaliza el script
 
 ## 🛠️ Preparación del Entorno (AWS EC2 / Linux)
 instalar y configurar todas las dependencias necesarias:
