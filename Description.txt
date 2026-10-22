@@ -1,0 +1,9 @@
+Scripting Bash y despliegue local mediante Docker
+
+Este proyecto se inicializó utilizando Spring Initializr (start.spring.io) para establecer la arquitectura base de la aplicación Java con Spring Boot. Posteriormente, durante la fase de validación y pruebas de despliegue en una máquina virtual Linux en AWS (Amazon EC2), se implementaron diversas modificaciones estructurales y de configuración para garantizar su correcto funcionamiento en la nube.
+
+Los ajustes principales derivados de estas pruebas en AWS incluyeron:
+
+Reestructuración de paquetes Java: Se alineó estrictamente la jerarquía de carpetas (com.unir.ejemplo.holadocker) para resolver problemas de escaneo de componentes (errores HTTP 404) entre la clase principal y el controlador REST.
+
+Gestión del ciclo de vida en Docker: Se creó un gestor interactivo (gestor.sh) para compilar el código fuente en el servidor remoto, construir la imagen y orquestar el contenedor Docker, asegurando que los cambios se reflejen de manera confiable en cada nuevo despliegue.
