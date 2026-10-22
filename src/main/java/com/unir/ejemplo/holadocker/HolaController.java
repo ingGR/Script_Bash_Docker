@@ -8,12 +8,14 @@ public class HolaController {
 
     @GetMapping("/hello")
     public String saludar() {
-        return "========================================================\n" +
-               "      Universidad Internacional de La Rioja (UNIR)      \n" +
-               "========================================================\n\n" +
-               "Curso: Computación Cliente-servidor y Administración de Sistemas\n\n" +
+        return "<pre>\n" +
+               "=================================================================\n" +
+               "          Universidad Internacional de La Rioja (UNIR)           \n" +
+               "=================================================================\n\n" +
+               "Curso: Computación Cliente-servidor y Administración de Sistemas\n" +
                "Actividad: Scripting - Bash y despliegue local mediante Docker\n\n" +
                "Presentado por: Andrés Guillermo Rodríguez Molina\n" +
-               "Fecha: Octubre 2026\n";
+               "Fecha: Octubre 2026\n" +
+               "</pre>";
     }
 }
