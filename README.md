@@ -8,7 +8,7 @@ El proyecto se inicializó originalmente utilizando **Spring Initializr** (`star
 * Se crearon scripts de aprovisionamiento de entorno y gestión de contenedores para automatizar el ciclo de vida del software de forma desatendida.
 
 ## 🛠️ Preparación del Entorno (AWS EC2 / Linux)
-instalar y configura automáticamente todas las dependencias necesarias:
+instalar y configurar todas las dependencias necesarias:
 * Git
 * Java 17 (Amazon Corretto)
 * Docker (con configuración de permisos de grupo)
