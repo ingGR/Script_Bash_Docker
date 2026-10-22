@@ -1,9 +1,16 @@
-Scripting Bash y despliegue local mediante Docker
+# Scripting - Bash y despliegue local mediante Docker
 
-Este proyecto se inicializó utilizando Spring Initializr (start.spring.io) para establecer la arquitectura base de la aplicación Java con Spring Boot. Posteriormente, durante la fase de validación y pruebas de despliegue en una máquina virtual Linux en AWS (Amazon EC2), se implementaron diversas modificaciones estructurales y de configuración para garantizar su correcto funcionamiento en la nube.
+## 📖 Descripción del Proyecto
+Este proyecto automatiza la compilación, empaquetado y despliegue de una aplicación Java Spring Boot dentro de un contenedor Docker, orquestado íntegramente a través de scripts de Bash.
 
-Los ajustes principales derivados de estas pruebas en AWS incluyeron:
+El proyecto se inicializó originalmente utilizando **Spring Initializr** (`start.spring.io`) para establecer la arquitectura base de la aplicación. Posteriormente, durante la fase de validación y pruebas de despliegue en una **máquina virtual Linux en AWS (Amazon EC2 - Amazon Linux 2023)**, se realizaron modificaciones estructurales esenciales:
+* Se reestructuró la jerarquía de paquetes Java (`com.unir.ejemplo.holadocker`) para resolver conflictos en el escaneo de componentes (`@RestController`).
+* Se crearon scripts de aprovisionamiento de entorno y gestión de contenedores para automatizar el ciclo de vida del software de forma desatendida.
 
-Reestructuración de paquetes Java: Se alineó estrictamente la jerarquía de carpetas (com.unir.ejemplo.holadocker) para resolver problemas de escaneo de componentes (errores HTTP 404) entre la clase principal y el controlador REST.
+## 🛠️ Preparación del Entorno (AWS EC2 / Linux)
+instalar y configurar todas las dependencias necesarias:
+* Git
+* Java 17 (Amazon Corretto)
+* Docker (con configuración de permisos de grupo)
+* Apache Maven (v3.9.9)
 
-Gestión del ciclo de vida en Docker: Se creó un gestor interactivo (gestor.sh) para compilar el código fuente en el servidor remoto, construir la imagen y orquestar el contenedor Docker, asegurando que los cambios se reflejen de manera confiable en cada nuevo despliegue.
